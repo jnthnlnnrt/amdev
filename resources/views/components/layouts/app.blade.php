@@ -10,8 +10,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Fontawesome -->
     <script defer src="{{ asset('/vendor/plugins/fontawesome/js/all.js') }}"></script>
@@ -30,37 +31,37 @@
         <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800">
             <ul class="space-y-1">
                 <li>
-                    <a href="{{route('dashboard')}}" wire:navigate class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="{{route('dashboard')}}" wire:navigate class="flex items-center p-2 text-base font-semibold text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i class="fa-solid fa-gauge-high w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
                         <span class="ml-3">Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <button type="button"
-                        class="flex items-center p-2 w-full text-sm font-semibold text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        class="flex items-center p-2 w-full text-base font-semibold text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                         aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
                         <i class="fa-solid fa-industry flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"></i>
                         <span class="flex-1 ml-3 text-left whitespace-nowrap">Organización</span>
                         <i class="fa-solid fa-chevron-down w-4 h-4"></i>
                     </button>
-                    <ul id="dropdown-pages" class="hidden py-1 space-y-1">
+                    <ul id="dropdown-pages" class="hidden space-y-1">
                         <li>
-                            <a href="#"
-                                class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Departamentos</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kanban</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Calendar</a>
+                            <a href="{{route('dashboard')}}" wire:navigate class="flex items-center p-2 pl-10 text-sm font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <i class="fa-solid fa-sitemap w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
+                                <span class="ml-3">Departamentos</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
     </aside>
+
+    <!-- Main content -->
+    <main class="p-6 md:ml-64 h-auto pt-20">
+        {{ $slot }}
+    </main>
+
 </body>
 
 </html>

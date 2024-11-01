@@ -38,7 +38,7 @@ new class extends Component
             </button>
             <a href="https://dipak.com.mx" class="flex items-center justify-between mr-4">
                 <x-application-logo-sm class="mr-3 h-8" alt="Dipak" />
-                <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">asset<span
+                <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-white">asset<span
                         class="font-light">manager</span></span>
             </a>
         </div>
